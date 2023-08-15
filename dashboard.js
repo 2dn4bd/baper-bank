@@ -12,18 +12,22 @@ document.getElementById('deposit-btn').addEventListener('click',function(){
     depoAmount.innerText = currentTotal;
 })
 
-//withdraw
-document.getElementById('withdraw-btn').addEventListener('click', function(){
-    const withdrawField = document.getElementById('withdraw-input');
-    const withdrawValue = withdrawField.value;
-    const withdrawValueNumber = parseFloat(withdrawValue);
-    const withAmount = document.getElementById('withdraw-amount');
-    const withTotal = withAmount.innerText;
-    const withTotalNUmber = parseFloat(withTotal);
-    const currentTotal = withTotalNUmber + withdrawValueNumber;
-    withdrawField.value = '';
-    withAmount.innerText = currentTotal;
-    
 //balance
+const balanceTotal = document.getElementById('balance-amount');
+const balanceTotalStr = balanceTotal.innerText;
+const mainBalanceTotal = parseFloat(balanceTotalStr);
+const currentBalance = mainBalanceTotal + depoValueNumber;
+balanceTotal.innerText = currentBalance;
 
-})
+//withdraw
+// document.getElementById('withdraw-btn').addEventListener('click', function(){
+//     const withdrawField = document.getElementById('withdraw-input');
+//     const withdrawValue = withdrawField.value;
+//     const withdrawValueNumber = parseFloat(withdrawValue);
+//     const withAmount = document.getElementById('withdraw-amount');
+//     const withTotal = withAmount.innerText;
+//     const withTotalNUmber = parseFloat(withTotal);
+//     const currentTotal = withTotalNUmber + withdrawValueNumber;
+//     withdrawField.value = '';
+//     withAmount.innerText = currentTotal;
+// })
